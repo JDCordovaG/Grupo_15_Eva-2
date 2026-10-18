@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import FiltroCatalogo from '../components/catalogo/FiltroCatalogo';
 import TarjetaComponente from '../components/catalogo/TarjetaComponente';
 
