@@ -1,5 +1,7 @@
 import React from 'react';
 
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+
 export default function Navbar({ vistaActual, cambiarVista, totalCarrito = 0 }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark-custom border-bottom border-secondary sticky-top px-3">

@@ -1,6 +1,9 @@
-import React from 'react';
 import Hero from '../components/layout/Hero';
 import Footer from '../components/layout/Footer';
+import React from 'react';
+
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+
 
 export default function InicioView({ alNavegar }) {
   return (

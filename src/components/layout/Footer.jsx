@@ -1,5 +1,7 @@
 import React from 'react';
 
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+
 export default function Footer() {
   return (
     <footer className="footer-custom text-center">

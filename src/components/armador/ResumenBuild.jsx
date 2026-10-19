@@ -1,5 +1,8 @@
-import React from 'react';
 import { calcularConsumoTotal, calcularSubtotal } from '../../utils/reglasCompatibilidad';
+import React from 'react';
+
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+
 
 export default function ResumenBuild({ build, alVerCompatibilidad }) {
   const consumoTotal = calcularConsumoTotal(build.CPU, build.GPU);

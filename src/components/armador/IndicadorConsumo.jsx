@@ -1,5 +1,7 @@
-import React from 'react';
 import { calcularConsumoTotal } from '../../utils/reglasCompatibilidad';
+import React from 'react';
+
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;
 
 export default function IndicadorConsumo({ build }) {
   const consumo = calcularConsumoTotal(build.CPU, build.GPU);

@@ -1,3 +1,7 @@
+import React from 'react';
+
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+
 export const DATOS_INICIALES_CATALOGO = [
   { id: 'cpu-1', tipo: 'CPU', marca: 'AMD', modelo: 'Ryzen 7 7800X3D', socket: 'AM5', precio: 389990, tdp: 120, imagen: '/cpu-Ryzen_7_7800X3D.jpg', descontinuado: false },
   { id: 'cpu-2', tipo: 'CPU', marca: 'Intel', modelo: 'Core i5-13600K', socket: 'LGA1700', precio: 299990, tdp: 125, imagen: '/cpu-Core_i5_13600K.jpg', descontinuado: false },

@@ -1,3 +1,7 @@
+import React from 'react';
+
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+
 export default function Hero({ alIrAlArmador }) {
   return (
     <div className="card card-custom p-4 h-100 text-center shadow">

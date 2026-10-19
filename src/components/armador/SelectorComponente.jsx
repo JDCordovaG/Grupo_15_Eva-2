@@ -1,5 +1,7 @@
 import React from 'react';
 
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+
 export default function SelectorComponente({ categoria, componenteElegido, alAbrirSelector }) {
   return (
     <div className="card card-custom p-3 mb-3 d-flex flex-row justify-content-between align-items-center">
