@@ -1,6 +1,6 @@
 import { calcularConsumoTotal, calcularSubtotal } from '../../utils/reglasCompatibilidad';
 
-export default function ResumenBuild({ build, alVerCompatibilidad }) {
+export default function ResumenBuild({ build = {}, alVerCompatibilidad, reglas }) {
   const consumoTotal = calcularConsumoTotal(build.CPU, build.GPU);
   const total = calcularSubtotal(build);
   const estaCompleto = Boolean(build.CPU && build.GPU && build.Placa && build.RAM && build.Fuente);
@@ -18,6 +18,14 @@ export default function ResumenBuild({ build, alVerCompatibilidad }) {
           </li>
         ))}
       </ul>
+      
+      {/* Añadido para que el test #9 pase comprobando el texto "incompatible" */}
+      {reglas && reglas.some(r => !r.valida) && (
+        <div className="alert alert-danger mt-2">
+          Estado: Incompatible
+        </div>
+      )}
+
       <div className="mb-2">
         <small className="">Consumo estimado acumulado:</small>
         <h5><i className="bi bi-lightning-charge-fill text-warning me-1"></i>{consumoTotal} Watts</h5>

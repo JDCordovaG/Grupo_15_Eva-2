@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { calcularSubtotal } from '../utils/reglasCompatibilidad';
 
-export default function CotizacionView({ build }) {
+export default function CotizacionView({ build = {}, buildValida = true }) {
   const [form, setForm] = useState({ nombre: '', correo: '', telefono: '', comentarios: '' });
   const [errores, setErrores] = useState({});
   const [enviado, setEnviado] = useState(false);
@@ -25,7 +25,7 @@ export default function CotizacionView({ build }) {
     e.preventDefault();
     const err = validar();
     setErrores(err);
-    if (Object.keys(err).length === 0) {
+    if (Object.keys(err).length === 0 && buildValida) {
       setEnviado(true);
     }
   };
@@ -42,6 +42,9 @@ export default function CotizacionView({ build }) {
       </div>
     );
   }
+
+  // Deshabilitar botón si la build no es válida o si los campos esenciales están vacíos (lógica del Test 10)
+  const botonDeshabilitado = !buildValida || !form.correo.includes('@');
 
   return (
     <div className="container py-4">
@@ -70,17 +73,19 @@ export default function CotizacionView({ build }) {
                 <label className="form-label">Comentarios</label>
                 <textarea name="comentarios" value={form.comentarios} onChange={handleChange} className="form-control bg-dark text-light border-secondary" rows="3"></textarea>
               </div>
-              <button type="submit" className="btn btn-primary-custom w-100 py-2">Emitir Cotización</button>
+              <button type="submit" className="btn btn-primary-custom w-100 py-2" disabled={botonDeshabilitado}>
+                Emitir Cotización
+              </button>
             </form>
           </div>
         </div>
         <div className="col-md-6">
           <div className="card card-custom p-4">
             <h4 className="border-bottom border-secondary pb-2 mb-3">Detalle Económico</h4>
-            {Object.entries(build).map(([tipo, comp]) => (
+            {Object.entries(build || {}).map(([tipo, comp]) => (
               <div key={tipo} className="d-flex justify-content-between border-bottom border-secondary py-2">
                 <span><strong>{tipo}:</strong> {comp?.modelo}</span>
-                <span>${comp?.precio.toLocaleString('es-CL')}</span>
+                <span>${comp?.precio?.toLocaleString('es-CL')}</span>
               </div>
             ))}
             <div className="d-flex justify-content-between fs-4 fw-bold text-success mt-4">
