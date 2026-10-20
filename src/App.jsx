@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
 import InicioView from './views/InicioView';
 import CatalogoView from './views/CatalogoView';
 import ArmadorView from './views/ArmadorView';
@@ -12,10 +11,6 @@ import { persistenciaService } from './services/persistenciaService';
 import { DATOS_INICIALES_CATALOGO } from './services/datosSimulados';
 import { calcularSubtotal } from './utils/reglasCompatibilidad';
 import './App.css';
-import React from 'react';
-
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
-
 
 export default function App() {
   const [vista, setVista] = useState('inicio');
