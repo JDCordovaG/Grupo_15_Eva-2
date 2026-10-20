@@ -5,10 +5,6 @@ import {
   validarCapacidadMemoria, 
   fuenteEsSuficiente 
 } from '../utils/reglasCompatibilidad';
-import React from 'react';
-
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
-
 
 export default function ResultadoView({ build, alIrACotizar}) {
   const consumoTotal = calcularConsumoTotal(build.CPU, build.GPU);

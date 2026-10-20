@@ -1,7 +1,3 @@
-import React from 'react';
-
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
-
 export default function TarjetaComponente({ componente, alSeleccionar, deshabilitado = false }) {
   return (
     <div className="card card-custom h-100 shadow-sm">

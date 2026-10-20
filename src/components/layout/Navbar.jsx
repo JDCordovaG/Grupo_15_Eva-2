@@ -15,9 +15,6 @@ export default function Navbar({ vistaActual, cambiarVista, totalCarrito = 0 }) 
           <button className={`btn btn-link nav-link ${vistaActual === 'armador' ? 'active fw-bold' : ''}`} onClick={() => cambiarVista('armador')}>Armador</button>
           <button className={`btn btn-link nav-link ${vistaActual === 'categorias' ? 'active fw-bold' : ''}`} onClick={() => cambiarVista('categorias')}>Categorías</button>
         </div>
-        <div className="d-flex align-items-center gap-2">
-          <span className="badge bg-success fs-6"><i className="bi bi-cart me-1"></i>${totalCarrito.toLocaleString('es-CL')}</span>
-        </div>
       </div>
     </nav>
   );

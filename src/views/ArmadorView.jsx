@@ -1,9 +1,5 @@
 import TarjetaComponente from '../components/catalogo/TarjetaComponente';
 import ResumenBuild from '../components/armador/ResumenBuild';
-import React from 'react';
-
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
-
 
 export default function ArmadorView({ componentes, build, alSeleccionar, alVerCompatibilidad }) {
   const tipos = ['CPU', 'GPU', 'Placa', 'RAM', 'Fuente'];

@@ -1,10 +1,6 @@
 import { useState } from 'react';
 import FiltroCatalogo from '../components/catalogo/FiltroCatalogo';
 import TarjetaComponente from '../components/catalogo/TarjetaComponente';
-import React from 'react';
-
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
-
 
 export default function CatalogoView({ componentes, alSeleccionarComponente, alVerDetalle }) {
   const [filtroTipo, setFiltroTipo] = useState('');

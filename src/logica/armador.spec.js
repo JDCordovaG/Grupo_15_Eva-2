@@ -7,9 +7,6 @@ import {
   fuenteEsSuficiente, 
   calcularSubtotal 
 } from './armador.js';
-import React from 'react';
-
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
 
 describe('Pruebas Unitarias - BuildMyPC (EP2)', () => {
   

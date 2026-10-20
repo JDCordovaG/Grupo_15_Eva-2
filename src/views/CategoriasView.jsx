@@ -1,7 +1,3 @@
-import React from 'react';
-
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
-
 export default function CategoriasView({ alSeleccionarCategoria }) {
   const categorias = [
     { id: 'CPU', nombre: 'Procesadores (CPU)', icono: 'bi-cpu', desc: 'Cerebros de alto rendimiento para tu equipo.' },

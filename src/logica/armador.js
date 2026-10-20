@@ -1,9 +1,4 @@
 // src/logica/armador.js
-import React from 'react';
-
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
-
-
 // 1. calcularConsumoTotal
 export function calcularConsumoTotal(cpuTdp, gpuTdp, consumoBase = 50) {
   return Number(cpuTdp || 0) + Number(gpuTdp || 0) + consumoBase;

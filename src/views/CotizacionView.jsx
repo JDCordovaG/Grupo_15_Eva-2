@@ -1,9 +1,5 @@
 import { useState } from 'react';
 import { calcularSubtotal } from '../utils/reglasCompatibilidad';
-import React from 'react';
-
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
-
 
 export default function CotizacionView({ build }) {
   const [form, setForm] = useState({ nombre: '', correo: '', telefono: '', comentarios: '' });

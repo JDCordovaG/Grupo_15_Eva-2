@@ -1,7 +1,3 @@
-import React from 'react';
-
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
-
 export default function DetalleComponenteView({ componente, alVolver, alAgregar }) {
   if (!componente) {
     return (

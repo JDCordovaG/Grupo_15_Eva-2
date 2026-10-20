@@ -1,7 +1,3 @@
-import React from 'react';
-
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
-
 export default function FiltroCatalogo({ filtroTipo, setFiltroTipo, busqueda, setBusqueda }) {
   return (
     <div className="card card-custom p-3 mb-4">

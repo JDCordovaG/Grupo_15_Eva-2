@@ -1,7 +1,3 @@
-import React from 'react';
-
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
-
 export function calcularConsumoTotal(cpu, gpu, consumoBase = 100) {
   const tdpCpu = cpu ? cpu.tdp : 0;
   const tdpGpu = gpu ? gpu.tdp : 0;
@@ -29,5 +25,5 @@ export function fuenteEsSuficiente(fuente, consumoTotal, margen = 0.20) {
 }
 
 export function calcularSubtotal(build) {
-  return Object.values(build).reduce((acc, comp) => acc + (comp ? comp.precio : 0), 0);
+  return Object.values(build || {}).reduce((acc, comp) => acc + (comp ? comp.precio : 0), 0);
 }
