@@ -19,7 +19,6 @@ export default function App() {
   const [componenteSeleccionado, setComponenteSeleccionado] = useState(null);
 
   useEffect(() => {
-    // Inicializar localStorage si está vacío
     if (!localStorage.getItem('buildmypc_componentes')) {
       localStorage.setItem('buildmypc_componentes', JSON.stringify(DATOS_INICIALES_CATALOGO));
     }

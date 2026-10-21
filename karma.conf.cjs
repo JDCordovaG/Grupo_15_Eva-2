@@ -1,4 +1,3 @@
-// karma.conf.cjs
 module.exports = function (config) {
   config.set({
     basePath: '',

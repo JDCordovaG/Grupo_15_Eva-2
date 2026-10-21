@@ -43,7 +43,6 @@ export default function CotizacionView({ build = {}, buildValida = true }) {
     );
   }
 
-  // Deshabilitar botón si la build no es válida o si los campos esenciales están vacíos (lógica del Test 10)
   const botonDeshabilitado = !buildValida || !form.correo.includes('@');
 
   return (
